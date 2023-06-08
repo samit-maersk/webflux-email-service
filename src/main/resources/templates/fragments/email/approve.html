@@ -1,0 +1,11 @@
+<div>
+    <p th:text="${emailBody}">...</p>
+    APPROVED
+    <div th:object="${emailBody}">
+        <p th:text="*{custName}">...</p>
+        <p th:text="*{custId}">...</p>
+        <ul>
+            <li th:each="item : *{ids}" th:text="${item}">...</li>
+        </ul>
+    </div>
+</div>
